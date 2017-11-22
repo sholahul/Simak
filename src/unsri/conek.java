@@ -16,12 +16,14 @@ import java.sql.SQLException;
  */
 public class conek {
     private static Connection koneksi;
-    public static Connection GetConnection()throws SQLException{
+   //ciptakan objek dari class connection bawakan java dimana fungsi dari 
+    //Connection : mempresentasikan suatu koneksi dengan suatu data source, juga digunakan untuk membuat objek Statement, PreparedStatement dan CallableStatement.
+    public static Connection GetConnection()throws SQLException{ //membuat prosedur getconnection
+        //SQLException : suatu class exception yang membungkus kesalahan (error) pengaksesan database.
+        //dimana Keyword throws digunakan dalam suatu method atau kelas yang mungkin menghasilkan suatu kesalahan sehingga perlu ditangkap errornya.
         if(koneksi==null)
-        {
-            new Driver();
-            
-            koneksi=(Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/dbperkuliahan","root","");
+        {          
+            koneksi=(Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/Simak","root","");
             
         }
         return koneksi;
