@@ -134,10 +134,10 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="jLabel7" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel8" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jComboBox1" alignment="0" min="-2" pref="246" max="-2" attributes="0"/>
+                                  <Component id="programstudi" alignment="0" min="-2" pref="246" max="-2" attributes="0"/>
                                   <Component id="jButton1" min="-2" max="-2" attributes="0"/>
                                   <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                      <Component id="password_mahasiswa" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="pass_mahasiswa" alignment="0" max="32767" attributes="0"/>
                                       <Component id="username" alignment="0" pref="158" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
@@ -161,11 +161,11 @@
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="password_mahasiswa" min="-2" max="-2" attributes="0"/>
+                      <Component id="pass_mahasiswa" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jComboBox1" min="-2" max="-2" attributes="0"/>
+                      <Component id="programstudi" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jButton1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace pref="27" max="32767" attributes="0"/>
@@ -225,7 +225,7 @@
             </Component>
             <Component class="javax.swing.JTextField" name="username">
             </Component>
-            <Component class="javax.swing.JComboBox" name="jComboBox1">
+            <Component class="javax.swing.JComboBox" name="programstudi">
               <Properties>
                 <Property name="editable" type="boolean" value="true"/>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
@@ -260,7 +260,7 @@
                 <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="gomenu"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JPasswordField" name="password_mahasiswa">
+            <Component class="javax.swing.JPasswordField" name="pass_mahasiswa">
             </Component>
           </SubComponents>
         </Container>

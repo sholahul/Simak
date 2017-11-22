@@ -5,6 +5,11 @@
  */
 package unsri;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Sholahul Fajri
@@ -38,9 +43,9 @@ public class Menu_Login_Mahasiswa extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         username = new javax.swing.JTextField();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        programstudi = new javax.swing.JComboBox<>();
         jLabel10 = new javax.swing.JLabel();
-        password_mahasiswa = new javax.swing.JPasswordField();
+        pass_mahasiswa = new javax.swing.JPasswordField();
         jPanel4 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -96,8 +101,8 @@ public class Menu_Login_Mahasiswa extends javax.swing.JFrame {
             }
         });
 
-        jComboBox1.setEditable(true);
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "TEKNIK INFORMATIKA", "TEKNIK INFORMATIKA BILINGUAL", "MANAJEMEN INFORMATIKA", "MAGISTER INFORMATIKA (S2)", "SISTEM INFORMASI", "SISTEM INFORMASI BILINGUAL", "SISTEM INFORMASI (S1 KELAS PROFESIONAL)", "SISTEM KOMPUTER", "SISTEM KOMPUTER BILINGUAL", "SISTEM KOMPUTER (S1 KELAS PROFESIONAL)", "TEKNIK KOMPUTER", "KOMPUTERISASI AKUNTANSI", "TEKNIK KOMPUTER DAN JARINGAN" }));
+        programstudi.setEditable(true);
+        programstudi.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "TEKNIK INFORMATIKA", "TEKNIK INFORMATIKA BILINGUAL", "MANAJEMEN INFORMATIKA", "MAGISTER INFORMATIKA (S2)", "SISTEM INFORMASI", "SISTEM INFORMASI BILINGUAL", "SISTEM INFORMASI (S1 KELAS PROFESIONAL)", "SISTEM KOMPUTER", "SISTEM KOMPUTER BILINGUAL", "SISTEM KOMPUTER (S1 KELAS PROFESIONAL)", "TEKNIK KOMPUTER", "KOMPUTERISASI AKUNTANSI", "TEKNIK KOMPUTER DAN JARINGAN" }));
 
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/home (2).png"))); // NOI18N
         jLabel10.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -123,10 +128,10 @@ public class Menu_Login_Mahasiswa extends javax.swing.JFrame {
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel7)
                             .addComponent(jLabel8)
-                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 246, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(programstudi, javax.swing.GroupLayout.PREFERRED_SIZE, 246, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jButton1)
                             .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(password_mahasiswa, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(pass_mahasiswa, javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(username, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 158, Short.MAX_VALUE)))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
@@ -143,11 +148,11 @@ public class Menu_Login_Mahasiswa extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel7)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(password_mahasiswa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(pass_mahasiswa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel8)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(programstudi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton1)
                 .addContainerGap(27, Short.MAX_VALUE))
@@ -243,12 +248,84 @@ public class Menu_Login_Mahasiswa extends javax.swing.JFrame {
         mu.setVisible(true);
         dispose();
     }//GEN-LAST:event_gomenu
-
+    private void pilihcombo(){
+        
+    }
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        Menu_Mahasiswa Mmhs = new Menu_Mahasiswa();
-        Mmhs.setVisible(true);
-        dispose();
+        String jurusan = "";
+        if(programstudi.getSelectedItem()=="TEKNIK INFORMATIKA"){
+            jurusan = "TEKNIK INFORMATIKA";
+        }else if(programstudi.getSelectedItem()=="TEKNIK INFORMATIKA BILINGUAL"){
+            jurusan = "TEKNIK INFORMATIKA BILINGUAL";
+        }else if(programstudi.getSelectedItem()=="MANAJEMEN INFORMATIKA"){
+            jurusan = "MANAJEMEN INFORMATIKA";
+        }
+        else if(programstudi.getSelectedItem()=="SISTEM INFORMASI BILINGUAL"){
+            jurusan = "SISTEM INFORMASI BILINGUAL";
+        }
+        else if(programstudi.getSelectedItem()=="SISTEM INFORMASI (S1 KELAS PROFESIONAL)"){
+            jurusan = "SISTEM INFORMASI (S1 KELAS PROFESIONAL)";
+        }
+        else if(programstudi.getSelectedItem()=="SISTEM KOMPUTER"){
+            jurusan = "SISTEM KOMPUTER";
+        }
+        else if(programstudi.getSelectedItem()=="SISTEM KOMPUTER (S1 KELAS PROFESIONAL)"){
+            jurusan = "SISTEM KOMPUTER (S1 KELAS PROFESIONAL)";
+        }
+        else if(programstudi.getSelectedItem()=="SISTEM KOMPUTER TEKNIK KOMPUTER"){
+            jurusan = "SISTEM KOMPUTER TEKNIK KOMPUTER";
+        }
+        else if(programstudi.getSelectedItem()==" KOMPUTERISASI AKUNTANSI"){
+            jurusan = "KOMPUTERISASI AKUNTANSI";
+        }
+        else if(programstudi.getSelectedItem()=="TEKNIK KOMPUTER DAN JARINGAN"){
+            jurusan = "TEKNIK KOMPUTER DAN JARINGAN";
+        }
+        
+        System.out.println(jurusan);    
+        try{//menciptkan objek statement dari utility statement dimana nantinya akan menangkap fungsi dari 
+            //getconnection dari class connect dan membuat 
+            /*
+            public Statement createStatement() throws SQLException
+            Creates a Statement object for sending SQL statements to the database.
+            SQL statements without parameters are normally executed using Statement objects.
+            If the same SQL statement is executed many times, it may be more efficient to use a PreparedStatement object.
+            */
+            
+            Statement statement = (Statement) conek.GetConnection().createStatement();
+            // Statement mempresentasikan suatu perintah SQL, dan dapat digunakan untuk menerima objek ResultSet.
+            //ResultSet :  mempresentasikan sebuah hasil dari database yang dihasilkan dari statemen SQL SELECT.
+            
+            ResultSet result = statement.executeQuery("Select * from mahasiswas where " + "nama='"+ username.getText() + "'"+" and "+"jurusan='"+ jurusan+"");
+            Menu_Mahasiswa Mmhs = new Menu_Mahasiswa();
+            if(result.next())
+            {
+                if(pass_mahasiswa.getText().equals(result.getString("password")))
+                {
+                    Mmhs.setVisible(true); //setvisible bawakan jswing yang mana fungsi yang mengembalikan form jswing
+                    this.dispose(); //prosedur bawakan java untuk keluar dari form aktif                   
+                }
+                else
+                {
+                    JOptionPane.showMessageDialog(rootPane,"Password Salah"); 
+                    pass_mahasiswa.setText("");
+                    username.requestFocus();
+                }
+            }
+            else
+            {
+                JOptionPane.showMessageDialog(rootPane, "User tidak ditemukan");
+                username.setText("");
+                pass_mahasiswa.setText("");
+                username.requestFocus();
+            }
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(rootPane, "gagal");
+        }
+//        Menu_Mahasiswa Mmhs = new Menu_Mahasiswa();
+//        Mmhs.setVisible(true);
+//        dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
@@ -295,7 +372,6 @@ public class Menu_Login_Mahasiswa extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
@@ -310,7 +386,8 @@ public class Menu_Login_Mahasiswa extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
-    private javax.swing.JPasswordField password_mahasiswa;
+    private javax.swing.JPasswordField pass_mahasiswa;
+    private javax.swing.JComboBox<String> programstudi;
     private javax.swing.JTextField username;
     // End of variables declaration//GEN-END:variables
 }
