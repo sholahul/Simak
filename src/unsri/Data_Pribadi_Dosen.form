@@ -384,6 +384,9 @@
                   <Image iconType="3" name="/Image/home (2).png"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="back_menu"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>

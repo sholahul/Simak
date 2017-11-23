@@ -200,7 +200,7 @@ public class Menu_Login_Mahasiswa extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jLabel5.setText("Form Login Sistem Informasi Akademik - Universitas Sriwijaya");
+        jLabel5.setText("Form Login Mahasiswa Sistem Informasi Akademik - Universitas Sriwijaya");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -297,18 +297,18 @@ public class Menu_Login_Mahasiswa extends javax.swing.JFrame {
             // Statement mempresentasikan suatu perintah SQL, dan dapat digunakan untuk menerima objek ResultSet.
             //ResultSet :  mempresentasikan sebuah hasil dari database yang dihasilkan dari statemen SQL SELECT.
             
-            ResultSet result = statement.executeQuery("Select * from mahasiswas where " + "nama='"+ username.getText() + "'"+" and "+"jurusan='"+ jurusan+"");
+            ResultSet result = statement.executeQuery("Select * from mahasiswa where " + "nama='"+ username.getText() + "'");
             Menu_Mahasiswa Mmhs = new Menu_Mahasiswa();
             if(result.next())
             {
-                if(pass_mahasiswa.getText().equals(result.getString("password")))
+                if(pass_mahasiswa.getText().equals(result.getString("password")) && jurusan.equals(result.getString("jurusan")))
                 {
                     Mmhs.setVisible(true); //setvisible bawakan jswing yang mana fungsi yang mengembalikan form jswing
                     this.dispose(); //prosedur bawakan java untuk keluar dari form aktif                   
                 }
-                else
+                else 
                 {
-                    JOptionPane.showMessageDialog(rootPane,"Password Salah"); 
+                    JOptionPane.showMessageDialog(rootPane,"Password/Jurusan Salah"); 
                     pass_mahasiswa.setText("");
                     username.requestFocus();
                 }
@@ -323,9 +323,7 @@ public class Menu_Login_Mahasiswa extends javax.swing.JFrame {
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(rootPane, "gagal");
         }
-//        Menu_Mahasiswa Mmhs = new Menu_Mahasiswa();
-//        Mmhs.setVisible(true);
-//        dispose();
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

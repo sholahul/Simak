@@ -15,6 +15,7 @@ public class Data_Pribadi_Dosen extends javax.swing.JFrame {
     /** Creates new form Data_Pribadi_Dosen */
     public Data_Pribadi_Dosen() {
         initComponents();
+        setLocationRelativeTo(this);
     }
 
     /** This method is called from within the constructor to
@@ -201,6 +202,11 @@ public class Data_Pribadi_Dosen extends javax.swing.JFrame {
         jLabel7.setText("Data Pribadi Dosen");
 
         jLabel41.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/home (2).png"))); // NOI18N
+        jLabel41.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                back_menu(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -326,6 +332,13 @@ public class Data_Pribadi_Dosen extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void back_menu(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_back_menu
+        // TODO add your handling code here:
+        Menu_Dosen MD = new Menu_Dosen();
+        MD.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_back_menu
 
     /**
      * @param args the command line arguments

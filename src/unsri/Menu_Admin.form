@@ -207,6 +207,9 @@
                   <Image iconType="3" name="/Image/home (2).png"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Menu_Utama"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="jButton1">
               <Properties>
@@ -317,7 +320,7 @@
         </Container>
         <Component class="javax.swing.JLabel" name="jLabel5">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Form Login Sistem Informasi Akademik - Universitas Sriwijaya"/>
+            <Property name="text" type="java.lang.String" value="Form Menu Admin Sistem Informasi Akademik - Universitas Sriwijaya"/>
           </Properties>
         </Component>
       </SubComponents>

@@ -147,10 +147,8 @@
                       <Component id="jLabel14" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="jButton3" pref="120" max="32767" attributes="0"/>
-                              <Component id="jButton2" max="32767" attributes="0"/>
-                          </Group>
+                          <Component id="jButton3" alignment="0" pref="120" max="32767" attributes="0"/>
+                          <Component id="jButton2" alignment="0" max="32767" attributes="0"/>
                           <Component id="jButton1" pref="120" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" pref="35" max="32767" attributes="0"/>
@@ -205,6 +203,9 @@
                   <Image iconType="3" name="/Image/Data Akademik.png"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="jButton2">
               <Properties>
@@ -305,7 +306,7 @@
         </Container>
         <Component class="javax.swing.JLabel" name="jLabel5">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Form Login Sistem Informasi Akademik - Universitas Sriwijaya"/>
+            <Property name="text" type="java.lang.String" value="Form Menu Mahasiswa Sistem Informasi Akademik - Universitas Sriwijaya"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel9">

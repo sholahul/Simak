@@ -82,6 +82,11 @@ public class Menu_Mahasiswa extends javax.swing.JFrame {
         });
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/Data Akademik.png"))); // NOI18N
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/Data Pribadi.png"))); // NOI18N
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -130,9 +135,8 @@ public class Menu_Mahasiswa extends javax.swing.JFrame {
                 .addComponent(jLabel14)
                 .addGap(12, 12, 12)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE)
-                        .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jButton3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE)
+                    .addComponent(jButton2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE))
                 .addGap(18, 35, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -183,7 +187,7 @@ public class Menu_Mahasiswa extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jLabel5.setText("Form Login Sistem Informasi Akademik - Universitas Sriwijaya");
+        jLabel5.setText("Form Menu Mahasiswa Sistem Informasi Akademik - Universitas Sriwijaya");
 
         jLabel9.setText("Universitas Sriwijaya, Indralya OI, Sumatera Selatan, Copyright 2017");
 
@@ -253,6 +257,13 @@ public class Menu_Mahasiswa extends javax.swing.JFrame {
         dispose();
         
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        SUB_MENU_DATA_AKADEMIK SMDA = new SUB_MENU_DATA_AKADEMIK();
+        SMDA.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments

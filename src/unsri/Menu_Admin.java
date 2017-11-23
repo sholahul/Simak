@@ -83,6 +83,11 @@ public class Menu_Admin extends javax.swing.JFrame {
         jLabel7.setText("Setting Account");
 
         jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/home (2).png"))); // NOI18N
+        jLabel13.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Menu_Utama(evt);
+            }
+        });
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/admin.png"))); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -193,7 +198,7 @@ public class Menu_Admin extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jLabel5.setText("Form Login Sistem Informasi Akademik - Universitas Sriwijaya");
+        jLabel5.setText("Form Menu Admin Sistem Informasi Akademik - Universitas Sriwijaya");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -249,6 +254,13 @@ public class Menu_Admin extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void Menu_Utama(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Menu_Utama
+        // TODO add your handling code here:
+        Menu_Utama MU = new Menu_Utama();
+        MU.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_Menu_Utama
 
     /**
      * @param args the command line arguments

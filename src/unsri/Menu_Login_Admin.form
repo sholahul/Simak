@@ -297,7 +297,7 @@
         </Container>
         <Component class="javax.swing.JLabel" name="jLabel5">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Form Login Sistem Informasi Akademik - Universitas Sriwijaya"/>
+            <Property name="text" type="java.lang.String" value="Form Login Admin Sistem Informasi Akademik - Universitas Sriwijaya"/>
           </Properties>
         </Component>
       </SubComponents>

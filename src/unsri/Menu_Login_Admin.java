@@ -184,7 +184,7 @@ public class Menu_Login_Admin extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jLabel5.setText("Form Login Sistem Informasi Akademik - Universitas Sriwijaya");
+        jLabel5.setText("Form Login Admin Sistem Informasi Akademik - Universitas Sriwijaya");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);

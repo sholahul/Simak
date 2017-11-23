@@ -132,7 +132,7 @@ public class Setting_Password extends javax.swing.JFrame {
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/home (2).png"))); // NOI18N
         jLabel10.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel10gomenu(evt);
+                Back_Menu(evt);
             }
         });
 
@@ -226,12 +226,12 @@ public class Setting_Password extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jLabel10gomenu(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel10gomenu
+    private void Back_Menu(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Back_Menu
         // TODO add your handling code here:
-        Menu_Utama mu = new Menu_Utama();
-        mu.setVisible(true);
+        Menu_Mahasiswa Mmhs = new Menu_Mahasiswa();
+        Mmhs.setVisible(true);
         dispose();
-    }//GEN-LAST:event_jLabel10gomenu
+    }//GEN-LAST:event_Back_Menu
 
     /**
      * @param args the command line arguments

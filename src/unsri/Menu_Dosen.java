@@ -83,6 +83,11 @@ public class Menu_Dosen extends javax.swing.JFrame {
         jLabel7.setText("Setting");
 
         jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/home (2).png"))); // NOI18N
+        jLabel14.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Menu_Utama(evt);
+            }
+        });
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/Setting.png"))); // NOI18N
         jButton1.setText("jButton1");
@@ -90,6 +95,11 @@ public class Menu_Dosen extends javax.swing.JFrame {
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/Data Akademik.png"))); // NOI18N
 
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/data pribadi dosen.png"))); // NOI18N
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -174,7 +184,7 @@ public class Menu_Dosen extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jLabel5.setText("Form Login Sistem Informasi Akademik - Universitas Sriwijaya");
+        jLabel5.setText("Form Menu Dosen Sistem Informasi Akademik - Universitas Sriwijaya");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -215,6 +225,20 @@ public class Menu_Dosen extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void Menu_Utama(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Menu_Utama
+        // TODO add your handling code here:
+        Menu_Utama MU = new Menu_Utama();
+        MU.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_Menu_Utama
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+        Data_Pribadi_Dosen DPD = new Data_Pribadi_Dosen();
+        DPD.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
