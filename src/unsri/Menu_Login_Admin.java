@@ -243,7 +243,7 @@ public class Menu_Login_Admin extends javax.swing.JFrame {
             SQL statements without parameters are normally executed using Statement objects.
             If the same SQL statement is executed many times, it may be more efficient to use a PreparedStatement object.
             */
-            Statement statement = (Statement) conek.GetConnection().createStatement();
+            Statement statement = (Statement) KoneksiDatabase.getKoneksi().createStatement();
             // Statement mempresentasikan suatu perintah SQL, dan dapat digunakan untuk menerima objek ResultSet.
             //ResultSet :  mempresentasikan sebuah hasil dari database yang dihasilkan dari statemen SQL SELECT.
             ResultSet result = statement.executeQuery("Select * from admin where " + "nama='"+ username.getText() + "'");

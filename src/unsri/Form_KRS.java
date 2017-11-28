@@ -206,11 +206,6 @@ public class Form_KRS extends javax.swing.JFrame {
                 back(evt);
             }
         });
-        jLabel20.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                back_menu(evt);
-            }
-        });
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
@@ -352,13 +347,6 @@ public class Form_KRS extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void back_menu(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_back_menu
-        // TODO add your handling code here:
-        SUB_MENU_DATA_AKADEMIK SMDA = new SUB_MENU_DATA_AKADEMIK();
-        SMDA.setVisible(true);
-        dispose();
-    }//GEN-LAST:event_back_menu
 
     private void back(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_back
         // TODO add your handling code here:

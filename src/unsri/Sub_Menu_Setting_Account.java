@@ -5,21 +5,16 @@
  */
 package unsri;
 
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
-import javax.swing.JOptionPane;
-
 /**
  *
  * @author Sholahul Fajri
  */
-public class Menu_Login_Dosen extends javax.swing.JFrame {
+public class Sub_Menu_Setting_Account extends javax.swing.JFrame {
 
     /**
      * Creates new form Menu_Login
      */
-    public Menu_Login_Dosen() {
+    public Sub_Menu_Setting_Account() {
         initComponents();
         setLocationRelativeTo(this);
     }
@@ -33,25 +28,20 @@ public class Menu_Login_Dosen extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel10 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
-        username = new javax.swing.JTextField();
-        jLabel11 = new javax.swing.JLabel();
-        password_dosen = new javax.swing.JPasswordField();
+        jButton3 = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/home (2).png"))); // NOI18N
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -81,27 +71,30 @@ public class Menu_Login_Dosen extends javax.swing.JFrame {
         jPanel3.setBackground(new java.awt.Color(228, 243, 205));
         jPanel3.setForeground(new java.awt.Color(51, 153, 0));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/formmenu.jpg"))); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Bookman Old Style", 1, 14)); // NOI18N
+        jLabel1.setText("Regristrasi Mahasiswa");
 
-        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(0, 153, 0));
-        jLabel6.setText("Username");
+        jLabel6.setFont(new java.awt.Font("Bookman Old Style", 1, 14)); // NOI18N
+        jLabel6.setText("Regristrasi Dosen");
 
-        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(0, 153, 51));
-        jLabel7.setText("Password");
+        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/home (2).png"))); // NOI18N
+        jLabel13.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Menu_Utama(evt);
+            }
+        });
 
-        jButton1.setText("Login");
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/admin.png"))); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
 
-        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/home (2).png"))); // NOI18N
-        jLabel11.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                gomenu(evt);
+        jButton3.setIcon(new javax.swing.ImageIcon("C:\\xampp\\htdocs\\Simak\\src\\Image\\Data Akademik.png")); // NOI18N
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
             }
         });
 
@@ -109,41 +102,38 @@ public class Menu_Login_Dosen extends javax.swing.JFrame {
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 249, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLabel13)
+                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(jLabel6)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel11))
+                        .addGap(109, 109, 109)
+                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(username, javax.swing.GroupLayout.DEFAULT_SIZE, 158, Short.MAX_VALUE)
-                            .addComponent(jLabel7)
-                            .addComponent(jButton1)
-                            .addComponent(password_dosen))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
+                        .addGap(74, 74, 74)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel6)
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(78, 78, 78))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel6)
-                    .addComponent(jLabel11))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(username, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel7)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(password_dosen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(13, 13, 13)
-                .addComponent(jButton1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 234, Short.MAX_VALUE)
+                .addComponent(jLabel13)
+                .addGap(41, 41, 41)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton1)
+                    .addComponent(jButton3))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1)
+                    .addComponent(jLabel6))
+                .addContainerGap(38, Short.MAX_VALUE))
         );
 
         jPanel4.setBackground(new java.awt.Color(88, 143, 85));
@@ -187,7 +177,7 @@ public class Menu_Login_Dosen extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jLabel5.setText("Form Login Dosen Sistem Informasi Akademik - Universitas Sriwijaya");
+        jLabel5.setText("Form Menu Admin Sistem Informasi Akademik - Universitas Sriwijaya");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -229,56 +219,26 @@ public class Menu_Login_Dosen extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void gomenu(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_gomenu
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
-        Menu_Utama mu = new Menu_Utama();
-        mu.setVisible(true);
+        RegisterMahasiswa RM = new RegisterMahasiswa();
+        RM.setVisible(true);
         dispose();
-    }//GEN-LAST:event_gomenu
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        try{//menciptkan objek statement dari utility statement dimana nantinya akan menangkap fungsi dari 
-            //getconnection dari class connect dan membuat 
-            /*
-            public Statement createStatement() throws SQLException
-            Creates a Statement object for sending SQL statements to the database.
-            SQL statements without parameters are normally executed using Statement objects.
-            If the same SQL statement is executed many times, it may be more efficient to use a PreparedStatement object.
-            */
-            
-            Statement statement = (Statement) KoneksiDatabase.getKoneksi().createStatement();
-            // Statement mempresentasikan suatu perintah SQL, dan dapat digunakan untuk menerima objek ResultSet.
-            //ResultSet :  mempresentasikan sebuah hasil dari database yang dihasilkan dari statemen SQL SELECT.
-            
-            ResultSet result = statement.executeQuery("Select * from dosen where " + "nip_dosen='"+ username.getText() + "'");
-            Menu_Dosen Mmhs = new Menu_Dosen();
-            if(result.next())
-            {
-                if(password_dosen.getText().equals(result.getString("password") ) )
-                {
-                    Mmhs.setVisible(true); //setvisible bawakan jswing yang mana fungsi yang mengembalikan form jswing
-                    this.dispose(); //prosedur bawakan java untuk keluar dari form aktif                   
-                }
-                else 
-                {
-                    JOptionPane.showMessageDialog(rootPane,"Password Salah"); 
-                    password_dosen.setText("");
-                    username.requestFocus();
-                }
-            }
-            else
-            {
-                JOptionPane.showMessageDialog(rootPane, "User tidak ditemukan");
-                username.setText("");
-                password_dosen.setText("");
-                username.requestFocus();
-            }
-        } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(rootPane, "gagal");
-        }
-
+        Data_Pribadi_Admin DPA = new Data_Pribadi_Admin();
+        DPA.setVisible(true);
+        dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void Menu_Utama(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Menu_Utama
+//         TODO add your handling code here:
+        Menu_Utama MU = new Menu_Utama();
+        MU.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_Menu_Utama
 
     /**
      * @param args the command line arguments
@@ -297,14 +257,42 @@ public class Menu_Login_Dosen extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Menu_Login_Dosen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Sub_Menu_Setting_Account.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Menu_Login_Dosen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Sub_Menu_Setting_Account.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Menu_Login_Dosen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Sub_Menu_Setting_Account.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Menu_Login_Dosen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Sub_Menu_Setting_Account.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -313,28 +301,25 @@ public class Menu_Login_Dosen extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Menu_Login_Dosen().setVisible(true);
+                new Sub_Menu_Setting_Account().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
-    private javax.swing.JPasswordField password_dosen;
-    private javax.swing.JTextField username;
     // End of variables declaration//GEN-END:variables
 }

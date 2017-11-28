@@ -301,7 +301,7 @@ public class Data_Pribadi_Mahasiswa extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jLabel5.setText("Form Data Pribadi Sistem Informasi Akademik - Universitas Sriwijaya");
+        jLabel5.setText("Form Data Pribadi Mahasiswa Sistem Informasi Akademik - Universitas Sriwijaya");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);

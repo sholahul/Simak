@@ -293,11 +293,11 @@ public class Menu_Login_Mahasiswa extends javax.swing.JFrame {
             If the same SQL statement is executed many times, it may be more efficient to use a PreparedStatement object.
             */
             
-            Statement statement = (Statement) conek.GetConnection().createStatement();
+            Statement statement = (Statement) KoneksiDatabase.getKoneksi().createStatement();
             // Statement mempresentasikan suatu perintah SQL, dan dapat digunakan untuk menerima objek ResultSet.
             //ResultSet :  mempresentasikan sebuah hasil dari database yang dihasilkan dari statemen SQL SELECT.
             
-            ResultSet result = statement.executeQuery("Select * from mahasiswa where " + "nama='"+ username.getText() + "'");
+            ResultSet result = statement.executeQuery("Select * from mahasiswa where " + "nim='"+ username.getText() + "'");
             Menu_Mahasiswa Mmhs = new Menu_Mahasiswa();
             if(result.next())
             {
