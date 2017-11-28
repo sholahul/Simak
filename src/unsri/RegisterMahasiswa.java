@@ -396,7 +396,9 @@ public class RegisterMahasiswa extends javax.swing.JFrame {
         // TODO add your handling code here:
         //ubah
         int i = tabelMahasiswa.getSelectedRow(); //fungsi int untuk mengembalikan baris
-      
+        if(i == -1){
+            return;
+        }
         String nim = (String) model.getValueAt(i, 0);
         String pwd = inputpassword.getText();   
         String nama = inputNama.getText();
@@ -408,21 +410,25 @@ public class RegisterMahasiswa extends javax.swing.JFrame {
         
         try{
             Connection c = KoneksiDatabase.getKoneksi();
-            String sql = "update mahasiswa set password = "+pwd+",nama = "+nama+",Tanggal_lahir = "+tanggalLahir+", kode_jurusan = "+jurusan+", alamat = "+alamat+", no_hp = "+hp+" where nim = "+nim;
+            String sql = "update mahasiswa set nama=\""+nama+"\",password=\""+pwd+"\",alamat=\""+alamat+"\",no_hp=\""+hp+"\",Tanggal_Lahir=\""+tanggalLahir+"\",kode_jurusan="+jurusan+" where nim=\""+nim+"\""; 
+                    
             PreparedStatement p = c.prepareStatement(sql);
-            p.setString(3, pwd);
-            p.setString(2, nama);
-            p.setDate(6, new java.sql.Date(tanggalLahir.getTime()));
-            p.setString(4, alamat);
-            p.setByte(7, jurusan);
-            p.setString(5, hp);
-            p.setString(1, nim);
-            
+
+//            p.setString(2, nama);
+//            p.setString(3, pwd);
+//            p.setString(4, alamat);
+//            p.setString(5, hp);
+//            p.setDate(6, new java.sql.Date(tanggalLahir.getTime()));
+//            p.setByte(7, jurusan);
+//                       
+//            p.setString(1, nim);
+//            
             p.executeUpdate();
             p.close();
         }
         catch(SQLException e){
             System.out.println("Terjadi Error Saat mengubah data!");
+            e.printStackTrace();
         }
         finally{
             loadData();
