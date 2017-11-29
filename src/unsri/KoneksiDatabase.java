@@ -15,6 +15,7 @@ import java.sql.SQLException;
  */
 public class KoneksiDatabase {
     private static Connection koneksi;
+    
     public static Connection getKoneksi(){
         if(koneksi == null){
             try{

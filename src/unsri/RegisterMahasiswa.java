@@ -19,11 +19,14 @@ public class RegisterMahasiswa extends javax.swing.JFrame {
     /**
      * Creates new form Form
      */
+    
     private DefaultTableModel model;
+    
     public RegisterMahasiswa() {
         initComponents();
-        setResizable(false);
+        setResizable(false); 
         setLocationRelativeTo(this);
+        
         model = new DefaultTableModel();
         tabelMahasiswa.setModel(model);
         
@@ -39,16 +42,21 @@ public class RegisterMahasiswa extends javax.swing.JFrame {
     }
     
      public void loadData(){
-        model.getDataVector().removeAllElements();
-        model.fireTableDataChanged();
-        
-        try{
+       model.getDataVector().removeAllElements();
+       model.fireTableDataChanged();
+       
+       try{
+           //koneksi
             Connection c = KoneksiDatabase.getKoneksi();
             Statement s = c.createStatement();
-            
+            //mempresentasikan suatu perintah SQL, dan dapat digunakan untuk menerima objek ResultSet
             String sql = "select * from mahasiswa";
-            ResultSet r = s.executeQuery(sql);
             
+            ResultSet r = s.executeQuery(sql);
+            //Untuk mengirim query dan mengeksekusi,
+            //mengunakan metode executeQuery yang mengembalikan objek bertipe ResultSet. 
+            //Method executeQuery digunakan untuk Statement Select. Sedangkan method 
+            //executeUpdate untuk Statement Insert, Update dan Delete.
             while(r.next()){
                 
                 Object[] o = new Object[7]; 
@@ -69,6 +77,7 @@ public class RegisterMahasiswa extends javax.swing.JFrame {
         }
         catch(SQLException e){
             System.out.println("Terjadi Error Saat Load Data !");
+//            e.printStackTrace();
         }
     }
      
@@ -396,9 +405,7 @@ public class RegisterMahasiswa extends javax.swing.JFrame {
         // TODO add your handling code here:
         //ubah
         int i = tabelMahasiswa.getSelectedRow(); //fungsi int untuk mengembalikan baris
-        if(i == -1){
-            return;
-        }
+
         String nim = (String) model.getValueAt(i, 0);
         String pwd = inputpassword.getText();   
         String nama = inputNama.getText();
@@ -439,9 +446,6 @@ public class RegisterMahasiswa extends javax.swing.JFrame {
         // TODO add your handling code here:
         //hapus
         int i = tabelMahasiswa.getSelectedRow();
-        if(i == -1){
-            return;
-        }
         
         String nim = (String) model.getValueAt(i,0);
         
